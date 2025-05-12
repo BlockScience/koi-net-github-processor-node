@@ -36,7 +36,7 @@ if not ensure_directories(node.config):
 
 logger.info(f"Starting Uvicorn server on {node.config.server.host}:{node.config.server.port} with root_path {node.config.server.path}")
 uvicorn.run(
-    "processor_github_node.server:app",
+    "github_processor_node.server:app",
     host=node.config.server.host,
     port=node.config.server.port,
 )

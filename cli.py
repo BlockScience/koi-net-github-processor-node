@@ -10,9 +10,9 @@ from rich.text import Text
 from rich.markdown import Markdown
 
 # Import core components - adjust paths
-from processor_github_node.core import node
-from processor_github_node import index_db
-from processor_github_node.utils import owner_repo_to_repo_rid, repo_rid_to_owner_repo
+from github_processor_node.core import node
+from github_processor_node import index_db
+from github_processor_node.utils import owner_repo_to_repo_rid, repo_rid_to_owner_repo
 
 logger = logging.getLogger(__name__)
 

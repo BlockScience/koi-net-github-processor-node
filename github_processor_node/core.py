@@ -1,5 +1,4 @@
 import logging
-import os
 from koi_net import NodeInterface
 # Import necessary RID types for the GitHubProcessor
 
@@ -21,4 +20,4 @@ logger.info(f"Node server config: {node.config.server.host}:{node.config.server.
 # Import handlers to register them
 # NOTE: This is imported after node is created so decorators can register
 # with the node.processor instance
-import processor_github_node.handlers  # noqa
+import github_processor_node.handlers  # noqa

@@ -41,21 +41,22 @@ SCHEMA_INDEXES = [
 def get_db_connection(db_path: str) -> sqlite3.Connection:
     """
     Get a SQLite database connection with row factory set to sqlite3.Row.
-    
+
     Args:
         db_path: Path to the SQLite database
-    
+
     Returns:
         A connection to the database with row_factory set
     """
     if not os.path.exists(db_path):
         initialize_db(db_path)
-    
+
     conn = sqlite3.connect(db_path)
     conn.row_factory = sqlite3.Row
     return conn
 
 def initialize_db(db_path: str) -> None:
+    logger.info(f"Initializing database: {db_path}")
     """Initialize the SQLite database with the required schema if it doesn't exist."""
     # Ensure parent directory exists
     os.makedirs(os.path.dirname(db_path), exist_ok=True)
