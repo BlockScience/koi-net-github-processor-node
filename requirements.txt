@@ -1,0 +1,8 @@
+uvicorn
+fastapi
+pydantic
+rich
+ruamel.yaml
+python-dotenv
+koi-net>=1.0.0b17
+rid-lib>=3.2.3
