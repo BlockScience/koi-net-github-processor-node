@@ -3,8 +3,6 @@ from koi_net.protocol.node import NodeProfile, NodeType, NodeProvides
 from pydantic import Field
 
 
-
-
 class GitCredentialsEnvConfig(EnvConfig):
     """Environment variables configuration for Git credentials."""
     github_token: str | None = "GITHUB_TOKEN"

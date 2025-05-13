@@ -84,6 +84,11 @@ app = FastAPI(
     title="GitHub Processor API"
 )
 
+@app.get("/health", tags=["System"])
+async def health_check():
+    """Basic health check for the service."""
+    return {"status": "healthy", "node_id": str(node.identity.rid) if node.identity else "uninitialized"}
+
 # Standard router for processor-specific endpoints
 router = APIRouter(prefix="/api/processor/github", tags=["GitHub Processor"])
 
