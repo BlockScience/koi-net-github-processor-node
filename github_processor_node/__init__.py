@@ -36,7 +36,7 @@ file_handler.setFormatter(
 logger.addHandler(file_handler)
 
 logger.info(
-    f"Logging initialized for HackMD Processor Node. Level: {log_level.upper()}."
+    f"Logging initialized for Github Processor Node. Level: {log_level.upper()}."
 )
 
 # Re-export the node instance
